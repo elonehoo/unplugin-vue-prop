@@ -6,16 +6,14 @@ import type { FilterPattern } from '@rollup/pluginutils'
 export interface Options {
   include?: FilterPattern
   exclude?: FilterPattern | undefined
-  configPath?: string
 }
 
-export type OptionsResolved = Required<Omit<Options, 'configPath'>> & { configPath?: string }
+export type OptionsResolved = Required<Options>
 
 function resolveOption(options: Options): OptionsResolved {
   return {
     include: options.include || [/\.vue$/, /\.vue\?vue/],
     exclude: options.exclude || undefined,
-    configPath: options.configPath,
   }
 }
 
@@ -45,7 +43,7 @@ export default createUnplugin<Options>((options = {}) => {
 
     transform(code, id) {
       try {
-        return transform(code, id, alias, opt.configPath)
+        return transform(code, id, alias)
       } catch (err: unknown) {
         this.error(`${name} ${err}`)
       }
