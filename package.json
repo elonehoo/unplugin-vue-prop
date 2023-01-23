@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@babel/generator": "^7.20.7",
-    "@babel/parser": "^7.20.7",
+    "@babel/parser": "^7.20.13",
     "@rollup/pluginutils": "^5.0.2",
     "@vue/compiler-core": "^3.2.45",
     "@vue/compiler-dom": "^3.2.45",
@@ -83,19 +83,19 @@
     "@sxzz/eslint-config-vue": "^2.4.4",
     "@types/babel__generator": "^7.6.4",
     "@types/node": "^18.11.18",
-    "@vitest/ui": "^0.27.1",
+    "@vitest/ui": "^0.27.3",
     "bumpp": "^8.2.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.32.0",
     "eslint-define-config": "^1.14.0",
     "fast-glob": "^3.2.12",
     "rimraf": "^3.0.2",
-    "rollup": "^3.10.0",
+    "rollup": "^3.10.1",
     "tsup": "^6.5.0",
     "tsx": "^3.12.2",
     "unplugin-vue": "^4.0.1",
     "vite": "^4.0.4",
-    "vitest": "^0.27.1",
+    "vitest": "^0.27.3",
     "vue": "^3.2.45"
   }
 }
