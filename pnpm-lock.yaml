@@ -22,7 +22,7 @@ importers:
       eslint-define-config: ^1.14.0
       fast-glob: ^3.2.12
       magic-string: ^0.27.0
-      rimraf: ^3.0.2
+      rimraf: ^4.1.2
       rollup: ^3.10.1
       tsup: ^6.5.0
       tsx: ^3.12.2
@@ -54,7 +54,7 @@ importers:
       eslint: 8.32.0
       eslint-define-config: 1.14.0
       fast-glob: 3.2.12
-      rimraf: 3.0.2
+      rimraf: 4.1.2
       rollup: 3.10.1
       tsup: 6.5.0_typescript@4.9.4
       tsx: 3.12.2
@@ -3101,6 +3101,12 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
+
+  /rimraf/4.1.2:
+    resolution: {integrity: sha512-BlIbgFryTbw3Dz6hyoWFhKk+unCcHMSkZGrTFVAx2WmttdBSonsdtRlwiuTbDqTKr+UlXIUqJVS4QT5tUzGENQ==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /rollup/3.10.0:

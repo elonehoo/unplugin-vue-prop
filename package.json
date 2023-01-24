@@ -89,7 +89,7 @@
     "eslint": "^8.32.0",
     "eslint-define-config": "^1.14.0",
     "fast-glob": "^3.2.12",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.1.2",
     "rollup": "^3.10.1",
     "tsup": "^6.5.0",
     "tsx": "^3.12.2",
