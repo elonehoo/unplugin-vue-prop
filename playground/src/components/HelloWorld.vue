@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import {Props} from './Props'
 
-defineProps<Props>()
+defineProps<Foo>()
 
 const count = ref(0)
 </script>
