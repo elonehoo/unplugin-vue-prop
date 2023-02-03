@@ -38,8 +38,6 @@ describe('transform', () => {
       onlyFiles: true,
     })
 
-    // for (const file of files.filter((n) => n.endsWith('typescript-global.vue'))) {
-    // for (const file of files.filter((n) => n.endsWith('14.vue'))) {
     for (const file of files.filter((n) => n.endsWith('vue'))) {
       it(file.replace(/\\/g, '/'), async () => {
         const filepath = resolve(root, file)
