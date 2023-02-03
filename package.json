@@ -65,7 +65,8 @@
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "pnpm -C test run test",
-    "test:ui": "pnpm -C test run test:ui"
+    "test:ui": "pnpm -C test run ui",
+    "test:coverage":"pnpm -C test run coverage"
   },
   "dependencies": {
     "@babel/generator": "^7.20.14",

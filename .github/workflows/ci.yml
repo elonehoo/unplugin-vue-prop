@@ -11,29 +11,40 @@ on:
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        node: [14.x, 16.x]
-        os: [ubuntu-latest]
-      fail-fast: false
-
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set node ${{ matrix.node }}
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Setup
-        run: npm i -g @antfu/ni
+          node-version: latest
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: latest
 
       - name: Install
-        run: nci
-
-      - name: Build
-        run: nr build
+        run: pnpm install
 
       - name: Test
-        run: nr test
+        run: pnpm run test
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: latest
+
+      - name: Install
+        run: pnpm install
+
+      - name: Coverage
+        run: pnpm run test:coverage

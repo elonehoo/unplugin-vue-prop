@@ -2,7 +2,8 @@
   "name": "@unplugin-vue-prop/test",
   "scripts": {
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "ui": "vitest --ui",
+    "coverage": "vitest --coverage"
   },
   "author": "Elone Hoo <hi@elonehoo.me>",
   "license": "MIT",
@@ -13,5 +14,8 @@
     "vite": "^4.1.1",
     "vitest": "^0.28.3",
     "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.28.3"
   }
 }
