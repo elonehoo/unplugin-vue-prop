@@ -1,3 +1,3 @@
-export interface Nav{
+export interface Foo{
   msg:string
 }

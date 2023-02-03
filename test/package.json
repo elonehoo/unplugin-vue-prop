@@ -1,0 +1,17 @@
+{
+  "name": "@unplugin-vue-prop/test",
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "author": "Elone Hoo <hi@elonehoo.me>",
+  "license": "MIT",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/ui": "^0.28.3",
+    "unplugin-vue-prop": "workspace:*",
+    "vite": "^4.1.1",
+    "vitest": "^0.28.3",
+    "vue": "^3.2.47"
+  }
+}
