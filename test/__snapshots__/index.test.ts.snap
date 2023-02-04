@@ -294,3 +294,24 @@ console.log('Hello')
 export { typescriptNormal as default };
 "
 `;
+
+exports[`transform > fixtures > test/src/typescriptNormal2.vue 1`] = `
+"var typescriptNormal2 = \`<script lang=\\"ts\\" setup>
+interface Props{
+  name:string
+}
+
+defineProps<Props>()
+console.log('Hello')
+</script>
+
+<template>
+  <div>
+    <h1>Hello World</h1>
+  </div>
+</template>
+\`;
+
+export { typescriptNormal2 as default };
+"
+`;
