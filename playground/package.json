@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.13.0",
     "path": "^0.12.7",
     "ts-node": "^10.9.1",
     "unplugin-vue-prop": "workspace:*",
