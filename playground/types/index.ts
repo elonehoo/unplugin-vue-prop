@@ -1,3 +1,3 @@
-export interface Foo{
-  msg:string
+export interface Foo {
+  msg: string
 }

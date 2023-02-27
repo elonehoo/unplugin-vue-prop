@@ -13,8 +13,8 @@
 
 ```vue
 <script setup lang="ts">
-import { Demo } from "./props";
-defineProps<Demo>();
+import { Demo } from './props'
+defineProps<Demo>()
 </script>
 ```
 
@@ -41,7 +41,7 @@ import Props from 'unplugin-vue-prop'
 import Vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [
-    Vue(), 
+    Vue(),
     Props()
   ],
 })
@@ -63,3 +63,48 @@ export default {
 
 <br></details>
 
+## Known limitations
+
+- Namespace imports like `import * as Foo from 'foo'` are not supported.
+- [These types](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html) are not supported.
+- The plugin currently only scans the content of `<script setup>`. Types defined in `<script>` will be ignored.
+
+## Notes
+
+- `Enum` types will be converted to Union Types (e.g. `type [name] = number | string`) , since Vue can't handle them right now.
+- The plugin may be slow because it needs to read files and traverse the AST (using @babel/parser).
+
+## Caveats
+
+- **Do not reference the types themselves implicitly, it will cause infinite loop**.
+Vue will also get wrong type definition even if you disable this plugin.
+
+Illegal code:
+
+```ts
+export type Bar = Foo
+export interface Foo {
+  foo: Bar
+}
+```
+
+Alternatively, you can reference the types themselves in their own definitions
+
+Acceptable code:
+
+```ts
+export type Bar = string
+export interface Foo {
+  foo: Foo
+  bar: Foo | Bar
+}
+```
+
+- Ending the type name with something like `_1` and `_2` is not recommended, because it may **conflict** with the plugin's transformation result
+
+These types may cause conflicts:
+
+```ts
+type Foo_1 = string
+type Bar_2 = number
+```
