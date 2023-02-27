@@ -2,8 +2,6 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-vue-prop?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-vue-prop)
 
-Starter template for [unplugin](https://github.com/unjs/unplugin).
-
 
 > Add import define props type support for Vue3 script-setup and lang is typescript
 
@@ -77,37 +75,12 @@ npm i unplugin-vue-prop -D
 
 ```ts
 // vite.config.ts
-import Props from 'unplugin-vue-prop/vite'
+import Props from 'unplugin-vue-prop'
 import Vue from '@vitejs/plugin-vue'
 export default defineConfig({
-  plugins: [Vue(), Props()],
-})
-```
-
-<br></details>
-
-<details>
-<summary>Rollup</summary><br>
-
-```ts
-// rollup.config.js
-import Props from 'unplugin-vue-prop/rollup'
-export default {
-  plugins: [Props()], // Must be before Vue plugin!
-}
-```
-
-<br></details>
-
-<details>
-<summary>esbuild</summary><br>
-
-```ts
-// esbuild.config.js
-import { build } from 'esbuild'
-build({
   plugins: [
-    require('unplugin-vue-prop/esbuild')(), // Must be before Vue plugin!
+    Vue(), 
+    Props()
   ],
 })
 ```
@@ -115,40 +88,16 @@ build({
 <br></details>
 
 <details>
-<summary>Webpack</summary><br>
+<summary>Nuxt</summary><br>
 
 ```ts
-// webpack.config.js
-module.exports = {
-  /* ... */
-  plugins: [require('unplugin-vue-prop/webpack')()],
+// nuxt.config.ts
+export default {
+  buildModules: [
+    'unplugin-vue-prop/nuxt',
+  ]
 }
 ```
 
 <br></details>
 
-<details>
-<summary>Vue CLI</summary><br>
-
-```ts
-// vue.config.js
-module.exports = {
-  configureWebpack: {
-    plugins: [require('unplugin-vue-prop/webpack')()],
-  },
-}
-```
-
-<br></details>
-
-#### TypeScript Support
-
-```jsonc
-// tsconfig.json
-{
-  "compilerOptions": {
-    // ...
-    "types": ["unplugin-vue-prop" /* ... */]
-  }
-}
-``` 

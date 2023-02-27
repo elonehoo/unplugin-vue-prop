@@ -14,88 +14,60 @@
   "keywords": [
     "unplugin",
     "vite",
-    "webpack",
-    "rollup",
-    "transform"
+    "nuxt"
   ],
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
     },
-    "./vite": {
-      "require": "./dist/vite.js",
-      "import": "./dist/vite.mjs"
-    },
-    "./webpack": {
-      "require": "./dist/webpack.js",
-      "import": "./dist/webpack.mjs"
-    },
-    "./rollup": {
-      "require": "./dist/rollup.js",
-      "import": "./dist/rollup.mjs"
-    },
-    "./esbuild": {
-      "require": "./dist/esbuild.js",
-      "import": "./dist/esbuild.mjs"
-    },
-    "./*": "./*"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./*"
-      ]
+    "./nuxt": {
+      "require": "./dist/nuxt.js",
+      "import": "./dist/nuxt.mjs"
     }
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "cross-env rimraf dist && tsup && tsx scripts/postbuild.mts",
-    "dev": "tsup --watch src",
-    "build:fix": "esno scripts/postbuild.ts",
+    "build": "cross-env NODE_ENV=production tsup",
+    "dev": "cross-env NODE_ENV=development tsup --watch src",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "play": "npm -C playground run dev",
     "prepublishOnly": "npm run build",
     "release": "bumpp && npm publish",
-    "start": "esno src/index.ts",
-    "test": "pnpm -C test run test",
-    "test:ui": "pnpm -C test run ui",
-    "test:coverage": "pnpm -C test run coverage"
+    "test": "vitest",
+    "test:ci": "cross-env CI=true vitest",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@babel/generator": "^7.21.1",
-    "@babel/parser": "^7.21.2",
-    "@rollup/pluginutils": "^5.0.2",
-    "@vue/compiler-core": "^3.2.47",
-    "@vue/compiler-dom": "^3.2.47",
+    "@babel/types": "^7.21.2",
     "@vue/compiler-sfc": "^3.2.47",
+    "debug": "^4.3.4",
+    "fast-glob": "^3.2.12",
+    "local-pkg": "^0.4.3",
     "magic-string": "^0.30.0",
-    "typescript": "^4.9.5",
-    "unplugin": "^1.1.0"
+    "picocolors": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/types": "^7.21.2",
-    "@sxzz/eslint-config-prettier": "^2.4.5",
-    "@sxzz/eslint-config-vue": "^2.4.5",
-    "@types/babel__generator": "^7.6.4",
+    "@antfu/eslint-config": "^0.35.3",
+    "@types/debug": "^4.1.7",
     "@types/node": "^18.14.2",
-    "bumpp": "^8.2.1",
+    "@vitest/coverage-c8": "^0.29.1",
+    "@vitest/ui": "^0.29.1",
+    "bumpp": "^9.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.35.0",
-    "eslint-define-config": "^1.15.0",
-    "fast-glob": "^3.2.12",
-    "rimraf": "^4.1.2",
-    "rollup": "^3.17.3",
-    "tsup": "^6.6.3",
-    "tsx": "^3.12.3",
-    "unplugin-vue": "4.0.2-beta.1",
+    "esno": "^0.16.3",
+    "tsup": "6.6.3",
+    "typescript": "^4.9.5",
     "vite": "^4.1.4",
+    "vitest": "^0.29.1",
     "vue": "^3.2.47"
   }
 }
