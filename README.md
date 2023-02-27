@@ -108,3 +108,7 @@ These types may cause conflicts:
 type Foo_1 = string
 type Bar_2 = number
 ```
+
+## License
+
+[MIT](./LICENSE) License © 2023-Present [Elone Hoo](https://github.com/elonehoo)
