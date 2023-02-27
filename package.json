@@ -45,6 +45,9 @@
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage"
   },
+  "peerDependencies": {
+    "vue":">3.2.0"
+  },
   "dependencies": {
     "@babel/types": "^7.21.2",
     "@vue/compiler-sfc": "^3.2.47",

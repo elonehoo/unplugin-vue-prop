@@ -26,44 +26,6 @@ export interface Demo {
 }
 ```
 
-<details>
-<summary>Output</summary>
-
-```vue
-<script setup lang="ts">
-import { } from "./props";
-defineProps<{name:string;}>();
-</script>
-```
-
-</details>
-
-**app.vue**
-```vue
-<script setup lang="ts">
-import { Foo as Demo } from "./props";
-defineProps<Demo>();
-</script>
-```
-**props.ts**
-```typescript
-export interface Foo {
-  name: string
-}
-```
-
-<details>
-<summary>Output</summary>
-
-```vue
-<script setup lang="ts">
-import { } from "./props";
-defineProps<{name:string;}>();
-</script>
-```
-
-</details>
-
 ## Installation
 
 ```bash
