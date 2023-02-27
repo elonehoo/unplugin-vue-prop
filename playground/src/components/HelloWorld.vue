@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { Props } from './Props'
+import type { Props } from '../entity'
 
 defineProps<Props>()
 
