@@ -85,7 +85,7 @@
     "@sxzz/eslint-config-vue": "^2.4.5",
     "@types/babel__generator": "^7.6.4",
     "@types/node": "^18.14.2",
-    "bumpp": "^8.2.1",
+    "bumpp": "^9.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.35.0",
     "eslint-define-config": "^1.15.0",
