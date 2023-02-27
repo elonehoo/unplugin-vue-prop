@@ -53,4 +53,4 @@ jobs:
         run: pnpm run build
 
       - name: Coverage
-        run: pnpm run test:coverage
+        run: pnpm run coverage
