@@ -1,6 +1,6 @@
 {
   "name": "unplugin-vue-prop",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Add import define props type support for Vue3 script-setup and lang is typescript",
   "license": "MIT",
   "homepage": "https://github.com/elonehoo/unplugin-vue-prop#readme",
@@ -46,7 +46,7 @@
     "coverage": "vitest run --coverage"
   },
   "peerDependencies": {
-    "vue":">3.2.0"
+    "vue": ">3.2.0"
   },
   "dependencies": {
     "@babel/types": "^7.21.2",
