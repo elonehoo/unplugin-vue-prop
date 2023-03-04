@@ -8,7 +8,7 @@ export default defineConfig({
   },
   minify: true,
   format: ['esm', 'cjs'],
-  entry: ['./src/index.ts', './src/nuxt.ts'],
+  entry: ['./src/*.ts'],
   clean: true,
   dts: isProduction,
   esbuildOptions(options) {

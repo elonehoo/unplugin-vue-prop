@@ -1,5 +1,6 @@
 {
   "name": "unplugin-vue-prop",
+  "type": "module",
   "version": "0.0.7",
   "description": "Add import define props type support for Vue3 script-setup and lang is typescript",
   "license": "MIT",
@@ -18,17 +19,33 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./vite": {
+      "types": "./dist/vite.d.ts",
+      "require": "./dist/vite.cjs",
+      "import": "./dist/vite.js"
     },
     "./nuxt": {
-      "require": "./dist/nuxt.js",
-      "import": "./dist/nuxt.mjs"
+      "types": "./dist/nuxt.d.ts",
+      "require": "./dist/nuxt.cjs",
+      "import": "./dist/nuxt.js"
+    },
+    "./*": "./*"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
     }
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -55,7 +72,8 @@
     "fast-glob": "^3.2.12",
     "local-pkg": "^0.4.3",
     "magic-string": "^0.30.0",
-    "picocolors": "^1.0.0"
+    "picocolors": "^1.0.0",
+    "unplugin": "^1.1.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",

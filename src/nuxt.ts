@@ -1,8 +1,9 @@
-import VueTypeImports from './vite'
+import unplugin from '.'
 
 export default function (_inlineOptions: any, nuxt: any) {
-  nuxt.hook('vite:extend', async (vite: any) => {
-    vite.config.plugins = vite.config.plugins || []
-    vite.config.plugins.unshift(VueTypeImports())
+  // install vite plugin
+  nuxt.hook('vite:extendConfig', async (config: any) => {
+    config.plugins = config.plugins || []
+    config.plugins.push(unplugin.vite())
   })
 }
