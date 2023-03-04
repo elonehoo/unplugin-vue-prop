@@ -37,7 +37,7 @@ npm i unplugin-vue-prop -D
 
 ```ts
 // vite.config.ts
-import Props from 'unplugin-vue-prop'
+import Props from 'unplugin-vue-prop/vite'
 import Vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [
@@ -108,6 +108,12 @@ These types may cause conflicts:
 type Foo_1 = string
 type Bar_2 = number
 ```
+
+## Credits
+
+Thanks to:
+
+- [@wheatjs/vite-plugin-vue-type-imports](https://github.com/wheatjs/vite-plugin-vue-type-imports)
 
 ## License
 
