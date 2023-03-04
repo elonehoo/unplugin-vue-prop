@@ -33,6 +33,11 @@
       "require": "./dist/nuxt.cjs",
       "import": "./dist/nuxt.js"
     },
+    "./webpack": {
+      "types": "./dist/webpack.d.ts",
+      "require": "./dist/webpack.cjs",
+      "import": "./dist/webpack.js"
+    },
     "./*": "./*"
   },
   "main": "dist/index.cjs",
@@ -57,6 +62,7 @@
     "play:vue": "npm -C playground/vue run dev",
     "play:nuxt": "npm -C playground/nuxt run dev",
     "play:vue2": "npm -C playground/vue2 run dev",
+    "play:webpack": "npm -C playground/webpack run dev",
     "prepublishOnly": "npm run build",
     "release": "bumpp && npm publish",
     "test": "vitest",
