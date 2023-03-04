@@ -116,7 +116,7 @@ importers:
       core-js: ^3.8.3
       eslint: ^7.32.0
       eslint-plugin-vue: ^8.0.3
-      unplugin-vue-prop: workspace:^0.0.7
+      unplugin-vue-prop: workspace:^*
       vue: ^3.2.13
     dependencies:
       core-js: 3.29.0
