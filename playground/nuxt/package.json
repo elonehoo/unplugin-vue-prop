@@ -11,6 +11,6 @@
     "nuxt": "^3.2.3"
   },
   "dependencies": {
-    "unplugin-vue-prop": "workspace:^0.0.7"
+    "unplugin-vue-prop": "workspace:*"
   }
 }
