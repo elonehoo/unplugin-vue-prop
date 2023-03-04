@@ -6,5 +6,5 @@
     "allowSyntheticDefaultImports": true,
     "typeRoots": ["types"]
   },
-  "include": ["vite.config.ts"]
+  "include": ["vue/vite.config.ts"]
 }

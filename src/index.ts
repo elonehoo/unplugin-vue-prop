@@ -12,8 +12,9 @@ export default createUnplugin(() =>({
       resolvedConfig = config  
     },
     async transform(code, id) {
-      if (!/\.(vue)$/.test(id))
-      return
+      if (!/\.(vue)$/.test(id)){
+        return
+      }
   
       const aliases = resolvedConfig?.resolve.alias
   
@@ -23,6 +24,6 @@ export default createUnplugin(() =>({
       })
   
       return transformResult
-    },
+    }
   },
 }))

@@ -54,7 +54,7 @@
     "dev": "cross-env NODE_ENV=development tsup --watch src",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "play": "npm -C playground run dev",
+    "play:vue": "npm -C playground/vue run dev",
     "prepublishOnly": "npm run build",
     "release": "bumpp && npm publish",
     "test": "vitest",
