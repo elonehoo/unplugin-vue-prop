@@ -55,6 +55,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "play:vue": "npm -C playground/vue run dev",
+    "play:nuxt": "npm -C playground/nuxt run dev",
+    "play:vue2": "npm -C playground/vue2 run dev",
     "prepublishOnly": "npm run build",
     "release": "bumpp && npm publish",
     "test": "vitest",
