@@ -2,8 +2,13 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-vue-prop?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-vue-prop)
 
-
 > Add import define props type support for Vue3 script-setup and lang is typescript
+
+## TODO
+
+- [ ] Support WebPack
+- [ ] Support Rollup
+- [ ] Support EsBuild
 
 ## Usage
 
