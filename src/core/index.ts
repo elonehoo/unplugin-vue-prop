@@ -1,6 +1,6 @@
 import { parse } from '@vue/compiler-sfc'
 import MagicString from 'magic-string'
-import type { TransformResult } from 'vite'
+import type { TransformResult } from 'rollup'
 import type { ExtractResult, TypeMetaData } from './ast'
 import { extractTypesFromSource, getUsedInterfacesFromAst } from './ast'
 import { debuggerFactory, getAst, notNullish, replaceAtIndexes, resolveDependencies, resolveExtends } from './utils'
@@ -194,8 +194,10 @@ export async function transform(code: string, { id, aliases }: TransformOptions)
 
   const isTS = scriptSetup && (scriptSetup.lang === 'ts' || scriptSetup.lang === 'tsx')
 
-  if (!isTS || !scriptSetup.content)
+  if (!isTS || !scriptSetup.content){
     return
+  }
+    
 
   const program = getAst(scriptSetup.content)
 
@@ -217,8 +219,10 @@ export async function transform(code: string, { id, aliases }: TransformOptions)
 
   const result = finalize(interfaces, extractResult)
 
-  if (!result)
+  if (!result){
     return
+  }
+    
 
   const { inlinedTypes, replacements } = result
 
@@ -237,13 +241,11 @@ export async function transform(code: string, { id, aliases }: TransformOptions)
   if (s.hasChanged()) {
     return {
       code: s.toString(),
-      get map() {
-        return s.generateMap({
-          source: id,
-          includeContent: true,
-          hires: true,
-        })
-      },
+      map:s.generateMap({
+        source: id,
+        includeContent: true,
+        hires: true,
+      })
     }
   }
 }

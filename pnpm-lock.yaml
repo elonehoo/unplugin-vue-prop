@@ -20,12 +20,14 @@ importers:
       local-pkg: ^0.4.3
       magic-string: ^0.30.0
       picocolors: ^1.0.0
+      rollup: ^3.18.0
       tsup: 6.6.3
       typescript: ^4.9.5
       unplugin: ^1.1.0
       vite: ^4.1.4
       vitest: ^0.29.1
       vue: ^3.2.47
+      webpack: ^5.75.0
     dependencies:
       '@babel/types': 7.21.2
       '@vue/compiler-sfc': 3.2.47
@@ -45,11 +47,13 @@ importers:
       cross-env: 7.0.3
       eslint: 8.35.0
       esno: 0.16.3
+      rollup: 3.18.0
       tsup: 6.6.3_typescript@4.9.5
       typescript: 4.9.5
       vite: 4.1.4_@types+node@18.14.2
       vitest: 0.29.1_@vitest+ui@0.29.1
       vue: 3.2.47
+      webpack: 5.75.0
 
   playground/nuxt:
     specifiers:
@@ -10155,6 +10159,14 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /rollup/3.18.0:
+    resolution: {integrity: sha512-J8C6VfEBjkvYPESMQYxKHxNOh4A5a3FlP+0BETGo34HEcE4eTlgCrO2+eWzlu2a/sHs2QUkZco+wscH7jhhgWg==}
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
   /run-async/2.4.1:
     resolution: {integrity: sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==}
     engines: {node: '>=0.12.0'}
@@ -11052,7 +11064,7 @@ packages:
       joycon: 3.1.1
       postcss-load-config: 3.1.4
       resolve-from: 5.0.0
-      rollup: 3.17.3
+      rollup: 3.18.0
       source-map: 0.8.0-beta.0
       sucrase: 3.29.0
       tree-kill: 1.2.2
@@ -11564,7 +11576,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.17.3
+      rollup: 3.18.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
