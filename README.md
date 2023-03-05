@@ -119,6 +119,8 @@ type Bar_2 = number
 Thanks to:
 
 - [@wheatjs/vite-plugin-vue-type-imports](https://github.com/wheatjs/vite-plugin-vue-type-imports)
+- [@sxzz/unplugin-vue-macros](https://github.com/sxzz/unplugin-vue-macros)
+- [@liulinboyi/unplugin-vue-import-props](https://github.com/liulinboyi/unplugin-vue-import-props)
 
 ## License
 
