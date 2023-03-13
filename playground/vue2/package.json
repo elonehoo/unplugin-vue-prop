@@ -7,7 +7,7 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@types/node": "^18.14.2",
+    "@types/node": "^18.15.0",
     "path": "^0.12.7",
     "ts-node": "^10.9.1",
     "unplugin-vue-prop": "workspace:*",
