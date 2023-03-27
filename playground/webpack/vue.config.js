@@ -1,5 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
-const Props = require('unplugin-vue-prop/webpack')
+import Props from 'unplugin-vue-prop/webpack'
 
 module.exports = defineConfig({
   transpileDependencies: true,
