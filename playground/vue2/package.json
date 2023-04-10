@@ -7,7 +7,7 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@types/node": "^18.15.10",
+    "@types/node": "^18.15.11",
     "path": "^0.12.7",
     "ts-node": "^10.9.1",
     "unplugin-vue-prop": "workspace:*",
@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue2": "^2.2.0",
-    "typescript": "^5.0.2",
+    "typescript": "^5.0.4",
     "vite": "^4.2.1",
     "vue-tsc": "^1.2.0"
   }
