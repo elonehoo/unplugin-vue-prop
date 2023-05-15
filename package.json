@@ -75,7 +75,7 @@
   },
   "dependencies": {
     "@babel/types": "^7.21.5",
-    "@vue/compiler-sfc": "^3.2.47",
+    "@vue/compiler-sfc": "^3.3.2",
     "debug": "^4.3.4",
     "fast-glob": "^3.2.12",
     "local-pkg": "^0.4.3",
@@ -86,19 +86,19 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.6",
     "@types/debug": "^4.1.7",
-    "@types/node": "^18.16.5",
+    "@types/node": "^18.16.9",
     "@vitest/coverage-c8": "^0.31.0",
     "@vitest/ui": "^0.31.0",
     "bumpp": "^9.1.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.40.0",
     "esno": "^0.16.3",
-    "rollup": "^3.21.5",
+    "rollup": "^3.21.7",
     "tsup": "6.7.0",
     "typescript": "^5.0.4",
     "vite": "^4.3.5",
     "vitest": "^0.31.0",
-    "vue": "^3.2.47",
-    "webpack": "^5.82.0"
+    "vue": "^3.3.2",
+    "webpack": "^5.82.1"
   }
 }
