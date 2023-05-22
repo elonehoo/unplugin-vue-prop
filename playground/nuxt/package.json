@@ -4,7 +4,7 @@
     "dev": "nuxt dev"
   },
   "devDependencies": {
-    "nuxt": "^3.4.3"
+    "nuxt": "^3.5.1"
   },
   "dependencies": {
     "unplugin-vue-prop": "workspace:*"
